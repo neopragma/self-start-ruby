@@ -40,7 +40,7 @@ Notice the return value is nil, meaning 'no value'. This means the 'puts' comman
 puts 'Hello, world'
 ```
 
-#### 4. Write to the standard error stream.
+##4. Write to the standard error stream.
 
 ```ruby
 STDERR.puts 'Hello, world'
@@ -78,13 +78,17 @@ puts my_name
 puts 'Hello, ' + my_name
 ```
 
-#### 10. String interpolation - insert string values into another string. Useful for formatting messages.
+#### 10. String interpolation
+
+Insert string values into another string. Useful for formatting messages.
 
 ```ruby
 puts "Hello, #{my_name}"
 ```
 
-#### 11. Ruby evaluates expressions and returns their value. You have been doing this all along.
+#### 11. Expressions.
+
+Ruby evaluates expressions and returns their value. You have been doing this all along.
 
 In step 1, you wrote 'Hello, world' and ruby returned 'Hello, world'. That is a simple expression - its value is just 'Hello, world'
 
@@ -107,7 +111,9 @@ Here are some more expressions you can try. (Now that you understand what's goin
 
 Notice the expressions 'Hello, ' + 'John' and 5 + 6 both use the '+' operator, but it has a different effect in each case. Ruby knows that adding two string means sticking the values together, and adding two numbers means to perform arithmetic addition on the numbers. 
 
-#### 12. Ruby applies operators in a certain order when it evaluates expressions. The order is called 'operator precedence'.  
+#### 12. Operator precedence.
+
+Ruby applies operators in a certain order when it evaluates expressions. The order is called 'operator precedence'.  
 
 ```ruby
 2 * 3 + 5
@@ -124,13 +130,17 @@ Ruby reads left to right and applies arithmetic operators * and / first, and the
 
 Notice the results of evaluating the three expressions above. Ruby evaluates expressions in the innermost parentheses first and works its way outward until the whole expression has been evaluated.
 
-#### 13. Everything is an object. Objects are instances of classes. Each object has a method named 'class' that reports the name of its class.
+#### 13. Everything is an object. 
+
+Objects are instances of classes. Each object has a method named 'class' that reports the name of its class.
 
 ```ruby
 puts 'Hello'.class
 ```
 
-#### 14. A class is like the script for a play. An object is like a performance of the play. All performances of Hamlet are based on the script of Hamlet, but each performance is unique.
+#### 14. A class is like the script for a play. An object is like a performance of the play. 
+
+All performances of Hamlet are based on the script of Hamlet, but each performance is unique.
 
 ```ruby
 string1 = 'one'
@@ -145,7 +155,9 @@ puts string2
 
 From the output you can surmise that every string object is a member of the String class, and every instance of the String class is a separate object. 
 
-#### 15. An object has 'identity'. This is how ruby can tell different instances of a class apart. These objects are of the same class, but have different identities.
+#### 15. An object has 'identity'. 
+
+This is how ruby can tell different instances of a class apart. These objects are of the same class, but have different identities.
 
 ```ruby
 puts string1.object_id
@@ -154,7 +166,9 @@ puts string2.object_id
 
 Every ruby object has a method named 'object_id' that returns its object_id. (Other languages might identify objects in other ways.)
 
-#### 16. An object has 'members'. Members include fields that contain values and methods that perform operations on the object.
+#### 16. An object has 'members'. 
+
+Members include fields that contain values and methods that perform operations on the object.
 
 ```ruby
 puts string1.methods
@@ -253,7 +267,9 @@ end
 add(2, 3)
 ```
 
-#### 21. Parentheses are optional except in cases when their absence would confuse the compiler.
+#### 21. Simplification: Parentheses are optional... 
+
+...except in cases when their absence would confuse the compiler.
 
 ```ruby
 def add number1, number2
@@ -270,7 +286,7 @@ When we append another method call to the result of the first method call, we ha
 add(2, 3).class
 ```
 
-#### 22. You don't have to have a separate variable for the result of a method.
+#### 22. Simplification: You don't need a separate variable for the result of a method.
 
 ```ruby
 def add number1, number2  
@@ -280,7 +296,9 @@ end
 add 2, 3
 ```
 
-#### 23. A ruby method returns the last value it evaluated, whatever that may be. So, you can omit the 'return' statement in most cases.
+#### 23. Simplification: You don't always need a 'return' statement.
+
+A ruby method returns the last value it evaluated, whatever that may be. So, you can omit the 'return' statement in most cases.
 
 ```ruby
 def add number1, number2  
@@ -292,7 +310,7 @@ add 2, 3
 
 In the example above, the last expression evaluated in method 'add' is 'number1 + number2', so that is the value returned from the method.
 
-#### 24. If you need to return from the middle of a method, you have to code a 'return' statement.
+#### 24. If you need to return from the middle of a method, you need a 'return' statement.
 
 ```ruby
 def add_positive number1, number2
@@ -418,7 +436,9 @@ b. You can refer to any element in the array by using its index.
 c. Array elements can be of any type - include other arrays.
 d. Arrays have a method named 'each' that functions as an iterator. You can pass a block of code into 'each', and it will execute that block once for each element in the array.
 
-#### 32. You can store a list of values with keys for subsequent lookup. In Ruby this is called a hash. Other languages call the same kind of structure a dictionary, a map, or a list of key-value pairs.
+#### 32. You can store a list of values with keys.
+
+In Ruby this is called a hash. Other languages call the same kind of structure a dictionary, a map, or a list of key-value pairs.
 
 ```ruby
 hash1 = { 'key1' => 'value1', 'key2' => 'value2' }
@@ -430,7 +450,7 @@ The keys and values may be any type of object:
 hash1 = { 'key1' => 'value1', 'key2' => 2, 'key3' => [5, 4, 3] }
 ```
 
-#### 33. Retrieve an element fro a hash by its key using the same syntax as you would use to get an element from an array:
+#### 33. Retrieve an element from a hash by its key.
 
 ```ruby
 value1 = hash1['key2']
@@ -487,7 +507,9 @@ hash1.keys.each do |key|
 end  
 ```
 
-#### 37. When you need to use a string value as some sort of label or key that never changes, you can gain a little efficiency by using a symbol rather than a string object. A symbol comprises a colon followe by its string value, without quotes.
+#### 37. Symbols.
+
+When you need to use a string value as some sort of label or key that never changes, you can gain a little efficiency by using a symbol rather than a string object. A symbol comprises a colon followe by its string value, without quotes.
 
 ```ruby
 String looks like this: 'key1'
@@ -529,7 +551,9 @@ end
 end
 ```
 
-#### 39. Ruby represents boolean values with true and false objects.
+#### 39. Boolean values.
+
+Ruby represents boolean values with 'true' and 'false' objects.
 
 ```ruby
 true.class
@@ -538,7 +562,9 @@ false.class
 false.methods
 ```
 
-#### 40. Conditional expressions return true or false values.
+#### 40. Conditional expressions.
+
+Conditional expressions return true or false values.
 
 ```ruby
 5 > 4
