@@ -420,7 +420,7 @@ arr1.each do |x|
 end
 ```
 
-# 31. Arrays within arrays (multidimensional arrays).
+#### 31. Arrays within arrays (multidimensional arrays).
 
 ```ruby
 arr1 = [1, 2, 3]
