@@ -706,7 +706,7 @@ puts my_dog.come 'Fido'
 
 Every ruby class has an 'initialize' method. When you call 'new', the 'initialize' method is called. When you need to initialize objects, you can override the 'initialize' method and place any necessary initialization code there.
 
-47. Your dog is a mammal.
+#### 47. Your dog is a mammal.
 
 Many kinds of objects belong to some sort of taxonomy of things that have a hierarchical relationship. For example, a dog is a canine; a canine is a mammal; a mammal is an animal; an animal is a living organism. In that example, 'living organism' is the top of a hierarchy of things. 'Animal' and 'plant' inherit many characteristics from 'living organism', and they add unique characteristics as well. 'Mammal', 'lizard', and 'arachnid' are types of 'animal'. They all have common characteristics that they inherit from 'animal' and from 'living organism', and each adds unique characteristics different from the others, as well. You could take it a step further and define each species of dog. A Chihuahua inherits most of its characteristics from Dog, and yet is distinct from a Rottweiler.
 
@@ -808,7 +808,7 @@ puts mammal.vocalize
 
 The 'require_relative' declaration at the top of dog.rb tells ruby where to find the mammal.rb file at run time. Whenever your code refers to another source file, you have to tell ruby where to find it.
 
-48. Refer to general definitions rather than specific ones when possible.
+#### 48. Refer to general definitions rather than specific ones when possible.
 
 The example above calls 'bark' when the dog vocalizes, but a more general method is available in the Mammal class - 'vocalize'. If we change the name of 'bark' to 'vocalize', then ruby will use the dog's version of 'vocalize' when our program refers to a Dog object, and the mammal's version of 'vocalize' when our program refers to a Mammal object.
 
@@ -842,7 +842,7 @@ puts "If I call my_dog.vocalize, I get #{my_dog.vocalize}"
 puts "If I call mammal.vocalize, I get #{mammal.vocalize}"
 ```
 
-49. A little housekeeping.
+#### 49. A little housekeeping.
 
 We've been calling our application in the same file as our Dog class definition. We really would prefer to separate the definition of the application from the use of the application. Let's create another file, run.rb, to execute our application. That way, the dog.rb file contains the definition of Dog, and nothing else.
 
@@ -881,7 +881,7 @@ puts "If I call mammal.vocalize, I get #{mammal.vocalize}"
 
 Notice the 'require_relative' declaration that tells ruby where to find the file, 'dog.rb'. Why do we not need to tell ruby where to find 'mammal.rb'? Because that declaration is already present in the 'dog.rb' file.
 
-50. Mixing common code into a class.
+#### 50. Mixing common code into a class.
 
 A module is a collection of methods that can be included with any class. Functionality that is common to many classes can be defined in a module. This allows the common functionality to be re-used in many classes. In ruby terminology, a module that is included in a class is called a 'mixin' because it 'mixes' the code in the module with the code in the class. Client code can treat the methods defined in the module as if they were part of the class.
 
