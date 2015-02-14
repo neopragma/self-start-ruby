@@ -397,7 +397,7 @@ puts arr1[1]
 puts arr1[2]
 ```
 
-##### 29. Another way to add elements to an array.
+#### 29. Another way to add elements to an array.
 
 ```ruby
 arr1 = []
