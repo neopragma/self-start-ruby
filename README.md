@@ -1,10 +1,10 @@
 # Quick and dirty introduction to Ruby
 
-## Preparation.
+#### Preparation.
 
 To work through these examples, you will need a working ruby environment on your machine. Installation steps differ depending on which version of Windows or OS X or which Linux or Unix distribution you are running, on which package manager you are using (if any), whether you are using a ruby version manager such as rvm or rbenv, and whether you are using an integrated development environment (IDE). All of that is out of scope for this document. We will assume you have a working ruby environment you can play with. 
 
-## 1. Traditional first program.
+#### 1. Traditional first program.
 
 Open a terminal window or command-line window and enter:
 
@@ -22,7 +22,9 @@ There, you've just written your first program. Congratulations, you're a ruby ex
 
 By the way, when you want to stop irb, enter 'quit'.
 
-## 2. All operating systems support three basic I/O streams: standard input, standard output, and standard error. They are often named stdin, stdout, and stderr, although the names may vary from one operating system to another or from one programming language to another. When you type input into irb, the tool reads your input from standard input and it writes to standard output. 
+#### 2. Standard I/O streams.
+
+All operating systems support three basic I/O streams: standard input, standard output, and standard error. They are often named stdin, stdout, and stderr, although the names may vary from one operating system to another or from one programming language to another. When you type input into irb, the tool reads your input from standard input and it writes to standard output. 
 
 When you write ruby code outside of a repl, you have to write ruby statements to write output. You can do that inside irb, as well. Here is how to write to the standard output stream. (People usually pronounce 'puts' "put ess"). Try this:
 
@@ -32,55 +34,57 @@ STDOUT.puts 'Hello, world'
 
 Notice the return value is nil, meaning 'no value'. This means the 'puts' command does not return a value to the caller. The output itself is a 'side effect'.
 
-## 3. STDOUT is assumed by default.
+#### 3. STDOUT is assumed by default.
 
 ```ruby
 puts 'Hello, world'
 ```
 
-## 4. Write to the standard error stream.
+#### 4. Write to the standard error stream.
 
 ```ruby
 STDERR.puts 'Hello, world'
 ```
 
-## 5. Say hello to yourself or someone else. You can substitute your name or any other name for 'John' if you wish.
+#### 5. Say hello to yourself or someone else. 
+
+You can substitute your name or any other name for 'John' if you wish.
 
 ```ruby
 puts 'Hello, John'
 ```
 
-## 6. String concatenation.
+#### 6. String concatenation.
 
 ```ruby
 puts 'Hello, ' + 'John'
 ```
 
-## 7. Declare a variable and assign a value to it.
+#### 7. Declare a variable and assign a value to it.
 
 ```ruby
 my_name = 'John'
 ```
 
-## 8. Display the contents of a variable.
+#### 8. Display the contents of a variable.
 
 ```ruby
 puts my_name
 ```
 
-## 9. Concatenate a literal string with the value of a variable.
+#### 9. Concatenate a literal string with the value of a variable.
 
 ```ruby
 puts 'Hello, ' + my_name
 ```
 
-## 10. String interpolation - insert string values into another string. Useful for formatting messages.
+#### 10. String interpolation - insert string values into another string. Useful for formatting messages.
 
 ```ruby
 puts "Hello, #{my_name}"
 ```
 
-## 11. Ruby evaluates expressions and returns their value. You have been doing this all along.
+#### 11. Ruby evaluates expressions and returns their value. You have been doing this all along.
 
 In step 1, you wrote 'Hello, world' and ruby returned 'Hello, world'. That is a simple expression - its value is just 'Hello, world'
 
@@ -103,7 +107,7 @@ Here are some more expressions you can try. (Now that you understand what's goin
 
 Notice the expressions 'Hello, ' + 'John' and 5 + 6 both use the '+' operator, but it has a different effect in each case. Ruby knows that adding two string means sticking the values together, and adding two numbers means to perform arithmetic addition on the numbers. 
 
-## 12. Ruby applies operators in a certain order when it evaluates expressions. The order is called 'operator precedence'.  
+#### 12. Ruby applies operators in a certain order when it evaluates expressions. The order is called 'operator precedence'.  
 
 ```ruby
 2 * 3 + 5
@@ -120,13 +124,13 @@ Ruby reads left to right and applies arithmetic operators * and / first, and the
 
 Notice the results of evaluating the three expressions above. Ruby evaluates expressions in the innermost parentheses first and works its way outward until the whole expression has been evaluated.
 
-## 13. Everything is an object. Objects are instances of classes. Each object has a method named 'class' that reports the name of its class.
+#### 13. Everything is an object. Objects are instances of classes. Each object has a method named 'class' that reports the name of its class.
 
 ```ruby
 puts 'Hello'.class
 ```
 
-## 14. A class is like the script for a play. An object is like a performance of the play. All performances of Hamlet are based on the script of Hamlet, but each performance is unique.
+#### 14. A class is like the script for a play. An object is like a performance of the play. All performances of Hamlet are based on the script of Hamlet, but each performance is unique.
 
 ```ruby
 string1 = 'one'
@@ -141,7 +145,7 @@ puts string2
 
 From the output you can surmise that every string object is a member of the String class, and every instance of the String class is a separate object. 
 
-## 15. An object has 'identity'. This is how ruby can tell different instances of a class apart. These objects are of the same class, but have different identities.
+#### 15. An object has 'identity'. This is how ruby can tell different instances of a class apart. These objects are of the same class, but have different identities.
 
 ```ruby
 puts string1.object_id
@@ -150,7 +154,7 @@ puts string2.object_id
 
 Every ruby object has a method named 'object_id' that returns its object_id. (Other languages might identify objects in other ways.)
 
-## 16. An object has 'members'. Members include fields that contain values and methods that perform operations on the object.
+#### 16. An object has 'members'. Members include fields that contain values and methods that perform operations on the object.
 
 ```ruby
 puts string1.methods
@@ -158,7 +162,7 @@ puts string1.methods.sort
 puts string1.size
 ```
 
-## 17. Numbers are objects, too. 
+#### 17. Numbers are objects, too. 
 
 ```ruby
 puts 5.class
@@ -183,7 +187,7 @@ e. An object's identity distinguishes it from all other objects in memory.
 f. An object's state comprises the current values of all its data members (fields).
 g. An object's operations are blocks of code that modify or report the object's state.
 
-## 18. Why does 5.size return 8 and not 5?  
+#### 18. Why does 5.size return 8 and not 5?  
 
 Ruby creates an object of the appropriate class depending on the value of the number.
 
@@ -212,7 +216,7 @@ my_num = 123456789012345678901234
 puts my_num.class
 ```
 
-## 19. Converting between integer and string types.
+#### 19. Converting between integer and string types.
 
 ```ruby
 puts 'Hello ' + 4
@@ -238,7 +242,7 @@ d. Within certain limits, a dynamically-typed language can convert the type of a
 e. When ruby can't guess how to convert the type of a variable, you can call a method on the variable to convert it explicitly to another type, provided the particular conversion makes sense. 
 
 
-## 20. You can define your own methods.
+#### 20. You can define your own methods.
 
 ```ruby
 def add (number1, number2)
@@ -249,7 +253,7 @@ end
 add(2, 3)
 ```
 
-## 21. Parentheses are optional except in cases when their absence would confuse the compiler.
+#### 21. Parentheses are optional except in cases when their absence would confuse the compiler.
 
 ```ruby
 def add number1, number2
@@ -266,7 +270,7 @@ When we append another method call to the result of the first method call, we ha
 add(2, 3).class
 ```
 
-## 22. You don't have to have a separate variable for the result of a method.
+#### 22. You don't have to have a separate variable for the result of a method.
 
 ```ruby
 def add number1, number2  
@@ -276,7 +280,7 @@ end
 add 2, 3
 ```
 
-## 23. A ruby method returns the last value it evaluated, whatever that may be. So, you can omit the 'return' statement in most cases.
+#### 23. A ruby method returns the last value it evaluated, whatever that may be. So, you can omit the 'return' statement in most cases.
 
 ```ruby
 def add number1, number2  
@@ -288,7 +292,7 @@ add 2, 3
 
 In the example above, the last expression evaluated in method 'add' is 'number1 + number2', so that is the value returned from the method.
 
-## 24. If you need to return from the middle of a method, you have to code a 'return' statement.
+#### 24. If you need to return from the middle of a method, you have to code a 'return' statement.
 
 ```ruby
 def add_positive number1, number2
@@ -316,7 +320,7 @@ e. A method accepts zero or more arguments.
 f. A method returns zero or 1 results.
 g. When a method doesn't return a value, ruby treats the result as 'nil' (no value).
 
-## 25. You can process a list of values (array).
+#### 25. You can process a list of values (array).
 
 ```ruby
 arr1 = [ 3, 5, 2, 14, 6, -9 ]
@@ -340,13 +344,13 @@ Array elements can be of different types:
 arr3 = [ 5.25, 'Steven', true, -75 ]
 ```
 
-## 26. Access a specific element in an array.
+#### 26. Access a specific element in an array.
 
 ```ruby
 puts arr1[2]
 ```
 
-## 27. Convert an array into a string.
+#### 27. Convert an array into a string.
 
 ```ruby
 str1 = arr1.to_s
@@ -355,7 +359,7 @@ puts arr1[2]
 puts str1[2]
 ```
 
-## 28. Create an empty array and add elements to it.
+#### 28. Create an empty array and add elements to it.
 
 ```ruby
 arr1 = []
@@ -375,7 +379,7 @@ puts arr1[1]
 puts arr1[2]
 ```
 
-### 29. Another way to add elements to an array.
+##### 29. Another way to add elements to an array.
 
 ```ruby
 arr1 = []
@@ -386,7 +390,7 @@ puts arr1.length
 puts arr1
 ```
 
-## 30. Iterating over an array. 
+#### 30. Iterating over an array. 
 
 ```ruby
 arr1 = [1, 2, 3, 4, 5]
@@ -414,7 +418,7 @@ b. You can refer to any element in the array by using its index.
 c. Array elements can be of any type - include other arrays.
 d. Arrays have a method named 'each' that functions as an iterator. You can pass a block of code into 'each', and it will execute that block once for each element in the array.
 
-## 32. You can store a list of values with keys for subsequent lookup. In Ruby this is called a hash. Other languages call the same kind of structure a dictionary, a map, or a list of key-value pairs.
+#### 32. You can store a list of values with keys for subsequent lookup. In Ruby this is called a hash. Other languages call the same kind of structure a dictionary, a map, or a list of key-value pairs.
 
 ```ruby
 hash1 = { 'key1' => 'value1', 'key2' => 'value2' }
@@ -426,7 +430,7 @@ The keys and values may be any type of object:
 hash1 = { 'key1' => 'value1', 'key2' => 2, 'key3' => [5, 4, 3] }
 ```
 
-## 33. Retrieve an element fro a hash by its key using the same syntax as you would use to get an element from an array:
+#### 33. Retrieve an element fro a hash by its key using the same syntax as you would use to get an element from an array:
 
 ```ruby
 value1 = hash1['key2']
@@ -452,7 +456,7 @@ But it's more convenient to use the keys to retrieve the values.
 hash1['key2']
 ```
 
-## 34. Add elements to a hash.
+#### 34. Add elements to a hash.
 
 ```ruby
 hash1 = {}
@@ -460,7 +464,7 @@ hash1['one'] = 1
 hash1['two'] = 2
 ```
 
-## 35. Merge the contents of two hashes.
+#### 35. Merge the contents of two hashes.
 
 ```ruby
 hash1 = {}
@@ -471,7 +475,7 @@ hash1.merge 'three' => 3, 'four' => 4
 hash1
 ```
 
-## 36. Process the elements in a hash.
+#### 36. Process the elements in a hash.
 
 ```ruby
 hash1.keys.each { |key| puts hash1[key] }
@@ -483,7 +487,7 @@ hash1.keys.each do |key|
 end  
 ```
 
-## 37. When you need to use a string value as some sort of label or key that never changes, you can gain a little efficiency by using a symbol rather than a string object. A symbol comprises a colon followe by its string value, without quotes.
+#### 37. When you need to use a string value as some sort of label or key that never changes, you can gain a little efficiency by using a symbol rather than a string object. A symbol comprises a colon followe by its string value, without quotes.
 
 ```ruby
 String looks like this: 'key1'
@@ -513,7 +517,7 @@ value1.class
 value1.to_sym.class
 ```
 
-## 38. Iterators, loops.
+#### 38. Iterators, loops.
 
 ```ruby
 5.times do |i|
@@ -525,7 +529,7 @@ end
 end
 ```
 
-## 39. Ruby represents boolean values with true and false objects.
+#### 39. Ruby represents boolean values with true and false objects.
 
 ```ruby
 true.class
@@ -534,7 +538,7 @@ false.class
 false.methods
 ```
 
-## 40. Conditional expressions return true or false values.
+#### 40. Conditional expressions return true or false values.
 
 ```ruby
 5 > 4
@@ -554,7 +558,7 @@ else
 end
 ```
 
-## 41. You can create your own classes.
+#### 41. You can create your own classes.
 
 ```ruby
 class Dog
@@ -573,7 +577,7 @@ fido.beg
 
 From this point forward, it will be inconvenient to work in irb. The time has come to save your ruby code in files.
 
-## 42. Create a ruby project.
+#### 42. Create a ruby project.
 
 If you are using an integrated development environment (IDE), use its project set-up features to create a ruby project. The details are out of scope for this document.
 
@@ -587,7 +591,7 @@ ruby_sandbox/
   +-- spec/
 ```
 
-## 43. Creating a ruby class.
+#### 43. Creating a ruby class.
 
 Create a file in your application directory named 'dog.rb'. For example, you might create the file in this location:
 
@@ -615,7 +619,7 @@ ruby app/dog.rb
 
 If no output appears on the console, then everything is OK. The program doesn't write any output, so this is expected. If there are error messages, then see if you can diagnose the problem based on the messages.
 
-## 44. Teach your dog to bark.
+#### 44. Teach your dog to bark.
 
 ```ruby
 class Dog
@@ -628,7 +632,7 @@ my_dog = Dog.new
 my_dog.bark
 ```
 
-## 45. Give your dog a name.
+#### 45. Give your dog a name.
 
 ```ruby
 class Dog
@@ -647,7 +651,7 @@ my_dog = Dog.new 'Rover'
 puts "My dog says: #{my_dog.say_name} #{my_dog.bark}"
 ```
 
-## 46. Teach your dog to come when called.
+#### 46. Teach your dog to come when called.
 
 ```ruby
 class Dog
