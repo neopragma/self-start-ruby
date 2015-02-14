@@ -330,13 +330,13 @@ add_positive 4, 5
 
 Now you know:
 
-a. You can define a method in ruby with the 'def' statement.
-b. All the statements between the 'def' and the matching 'end' statements are part of the method.
-c. A method is part of a class.
-d. A method has a name.
-e. A method accepts zero or more arguments.
-f. A method returns zero or 1 results.
-g. When a method doesn't return a value, ruby treats the result as 'nil' (no value).
+1. You can define a method in ruby with the 'def' statement.
+1. All the statements between the 'def' and the matching 'end' statements are part of the method.
+1. A method is part of a class.
+1. A method has a name.
+1. A method accepts zero or more arguments.
+1. A method returns zero or 1 results.
+1. When a method doesn't return a value, ruby treats the result as 'nil' (no value).
 
 #### 25. You can process a list of values (array).
 
@@ -431,10 +431,10 @@ puts arr2[2][1]
 
 Now you know:
 
-a. To process a list of values, you can use an array.
-b. You can refer to any element in the array by using its index.
-c. Array elements can be of any type - include other arrays.
-d. Arrays have a method named 'each' that functions as an iterator. You can pass a block of code into 'each', and it will execute that block once for each element in the array.
+1. To process a list of values, you can use an array.
+1. You can refer to any element in the array by using its index.
+1. Array elements can be of any type - include other arrays.
+1. Arrays have a method named 'each' that functions as an iterator. You can pass a block of code into 'each', and it will execute that block once for each element in the array.
 
 #### 32. You can store a list of values with keys.
 
