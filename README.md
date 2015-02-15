@@ -193,13 +193,13 @@ From the output you can see that a literal number is an object, and a variable t
 
 Now you know:
 
-a. Ruby is an object-oriented language.
-b. Everything in ruby is an object.
-c. The characteristics of an object are defined by its class. (An object's class is sometimes called its 'type'.)
-d. Every object has three key properties: identity, state, and operations.
-e. An object's identity distinguishes it from all other objects in memory.
-f. An object's state comprises the current values of all its data members (fields).
-g. An object's operations are blocks of code that modify or report the object's state.
+1. Ruby is an object-oriented language.
+1. Everything in ruby is an object.
+1. The characteristics of an object are defined by its class. (An object's class is sometimes called its 'type'.)
+1. Every object has three key properties: identity, state, and operations.
+1. An object's identity distinguishes it from all other objects in memory.
+1. An object's state comprises the current values of all its data members (fields).
+1. An object's operations are blocks of code that modify or report the object's state.
 
 #### 18. Why does 5.size return 8 and not 5?  
 
@@ -249,11 +249,11 @@ puts "I have #{my_num} kittens."
 
 Now you know:
 
-a. Ruby is a dynamically-typed language.
-b. A dynamically-typed language determines the appropriate class for each object by examining its contents.
-c. You don't have to declare the type or class of variables in a dynamically-typed language.
-d. Within certain limits, a dynamically-typed language can convert the type of a variable from one class to another depending on how the variable is used.
-e. When ruby can't guess how to convert the type of a variable, you can call a method on the variable to convert it explicitly to another type, provided the particular conversion makes sense. 
+1. Ruby is a dynamically-typed language.
+1. A dynamically-typed language determines the appropriate class for each object by examining its contents.
+1. You don't have to declare the type or class of variables in a dynamically-typed language.
+1. Within certain limits, a dynamically-typed language can convert the type of a variable from one class to another depending on how the variable is used.
+1. When ruby can't guess how to convert the type of a variable, you can call a method on the variable to convert it explicitly to another type, provided the particular conversion makes sense. 
 
 
 #### 20. You can define your own methods.
