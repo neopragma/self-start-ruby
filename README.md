@@ -949,3 +949,27 @@ Now you know enough about ruby to get started with real work. In other words, yo
 
 Most programming languages provide a mechanism to include pre-existing libraries of functions in your programs. A ruby library is called a 'gem'. You can download gems from a central Internet-based repository or from a private repository and then use them in your applications.
 
+Open a Terminal or command-line window. To install a gem from the Internet, use the 'gem' program that came with your ruby distribution:
+
+```shell
+gem install mechanize
+```
+
+The gem 'mechanize' provides helper methods to make HTTP calls. Start irb and try a few commands:
+
+```ruby
+require 'mechanize'
+agent = Mechanize.new
+page = agent.get('http://www.google.com')
+```
+
+The output from that command shows what was returned from Google. Try a few commands to pull values out of the response message:
+
+```ruby
+page.title
+page.forms[0].buttons[1].value
+```
+
+You use gems in just the same way in your own classes and modules.
+
+
