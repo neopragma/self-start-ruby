@@ -40,7 +40,7 @@ Notice the return value is nil, meaning 'no value'. This means the 'puts' comman
 puts 'Hello, world'
 ```
 
-##4. Write to the standard error stream.
+#### 4. Write to the standard error stream.
 
 ```ruby
 STDERR.puts 'Hello, world'
@@ -944,3 +944,8 @@ Now you know enough about ruby to get started with real work. In other words, yo
 * [Ruby documentation](http://ruby-doc.org/)
 * [Google search for ruby tutorials](https://www.google.com/search?client=ubuntu&channel=fs&q=ruby+tutorial&ie=utf-8&oe=utf-8)
 * ['The' ruby gems repository](https://rubygems.org/) 
+
+#### 51. Using gems.
+
+Most programming languages provide a mechanism to include pre-existing libraries of functions in your programs. A ruby library is called a 'gem'. You can download gems from a central Internet-based repository or from a private repository and then use them in your applications.
+
