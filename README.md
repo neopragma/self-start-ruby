@@ -509,7 +509,7 @@ end
 
 #### 37. Symbols.
 
-When you need to use a string value as some sort of label or key that never changes, you can gain a little efficiency by using a symbol rather than a string object. A symbol comprises a colon followe by its string value, without quotes.
+When you need to use a string value as some sort of label or key that never changes, you can gain a little efficiency by using a symbol rather than a string object. A symbol comprises a colon followed by its string value, without quotes.
 
 ```ruby
 String looks like this: 'key1'
