@@ -98,9 +98,9 @@ puts 'Hello, ' + 'John'
 
 Here's what happened:
 
-a. Ruby evaluated the expression Hello, ' + 'John and returned the result 'Hello, John'. 
-b. Ruby passed the result 'Hello, John' to puts.
-c. puts displayed the value on stdout. 
+# Ruby evaluated the expression Hello, ' + 'John and returned the result 'Hello, John'. 
+# Ruby passed the result 'Hello, John' to puts.
+# puts displayed the value on stdout. 
 
 Here are some more expressions you can try. (Now that you understand what's going on, you don't have to keep typing 'puts' while you're in irb unless you want to.)
 
