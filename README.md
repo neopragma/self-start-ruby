@@ -889,7 +889,7 @@ What if we make Mammal a module and mix it into the Dog class, instead of having
 
 ```ruby
 # mammal.rb
-class Mammal
+module Mammal
   def initialize species
     @species = species
   end
