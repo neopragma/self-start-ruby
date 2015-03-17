@@ -201,9 +201,9 @@ Now you know:
 1. An object's state comprises the current values of all its data members (fields).
 1. An object's operations are blocks of code that modify or report the object's state.
 
-#### 18. Why does 5.size return 8 and not 5?  
+#### 18. Why doesn't 5.size return 5? 
 
-Ruby creates an object of the appropriate class depending on the value of the number.
+Ruby creates an object of the appropriate class depending on the value of the number. The number 5 is represented as an integer. An integer occupies 8 bytes on a 64-bit system, and 4 bytes on a 32-bit system. The following examples are from a 64-bit machine:
 
 ```ruby
 puts 5.class
@@ -723,7 +723,7 @@ Let's start to separate the unique characteristics of Dog from the common charac
 * defecate
 * urinate
 * mate
-* live birth
+* give live birth
 * run
 * jump
 
