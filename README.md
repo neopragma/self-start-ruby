@@ -2,7 +2,11 @@
 
 #### Preparation.
 
-To work through these examples, you will need a working ruby environment on your machine. Installation steps differ depending on which version of Windows or OS X or which Linux or Unix distribution you are running, on which package manager you are using (if any), whether you are using a ruby version manager such as rvm or rbenv, and whether you are using an integrated development environment (IDE). All of that is out of scope for this document. We will assume you have a working ruby environment you can play with. 
+To work through these examples, you will need a working ruby environment. 
+
+To install ruby on your local system, installation steps differ depending on which version of Windows or OS X or which Linux or Unix distribution you are running, on which package manager you are using (if any), whether you are using a ruby version manager such as rvm or rbenv, and whether you are using an integrated development environment (IDE). All of that is out of scope for this document. 
+
+You can also use http://tryruby.org or http://cyber-dojo.org.
 
 #### 1. Traditional first program.
 
